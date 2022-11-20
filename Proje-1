@@ -1,0 +1,28 @@
+[22,27,16,2,18,6] -> Insertion Sort
+
+1.Soru- Yukarıda verilen dizinin sort türüne göre aşamalarını yazınız.
+[2,27,16,22,18,6] -> 2 en en küçük eleman olduğu için 22 ile yer değiştirilir.
+[2,6,16,22,18,27] -> Ardından ikinci en küçük eleman olan 6 dizinin ikinci sırasındaki elemanla yer değştirir.
+[2,6,16,22,18,27] -> Kalan elemanlar arasında 16'dan daha küçük bir eleman olmadığı için 16 sayısı dizideki en küçük 3.elemandır. Bu yüzden bir değişiklik yapılmaz.
+[2,6,16,18,22,27] -> Kalan elemanlar arasında 18 en küçük olduğu için 4. indexteki 22 ile yer değiştirilir. 22, 27'den küçük olduğu için bir değişiklik yapılmaz. Insertion Sort işlemi tamamlanmıştır.
+
+2. Soru- Big-O gösterimini yazınız.
+Verilen dizide n tane eleman olacağı düşünülürse, en başta worst case'e göre n tane işlem yapılacaktır. Ardından n-1 tane ve n-2 tane işlem yapılacaktır. Bu durum insertion sort işlemi için geçerlidir.
+Bu süreç işlem sayısı 1'e ulaşana dek devam eder. Toplam işlem sayısı n+(n-1)+(n-2)+...+1 şeklinde olacaktır. Bunun formülleştirilmiş hali ise [n*(n+1)]/2'dir.
+İşlemi devam ettirirsek (n**2+n)/2 olur.
+Verilen dizide de 6 tane eleman vardır ve insertion sort yöntemi göz önüne alınırsa.
+İlk aşamada 6 işlem, ardından 5 işlem şeklinde işlem sayısı 1 olana kadar süreç devam edecektir. Bu yüzden (n**2+n)/2 formülü bu durum için geçerlidir.
+Big-O gösterimi göz önüne alındığında yüksek dereceye sahip olan kısım alınır ve katsayı önemsiz hale gelir.
+Bu yüzden, Big-O değeri = O(n**2)
+
+3. Soru- Dizi sıralandıktan sonra 18 sayısı aşağıdaki case'lerden hangisinin kapsamına girer? Yazınız.
+Average case: Aradığımız sayının ortada olması
+Worst case: Aradığımız sayının sonda olması
+Best case: Aradığımız sayının dizinin en başında olması.
+[2,6,16,18,22,27] -> Dizi sıralandıktan sonraki yapıya bakıldığında 18 sayısı dizinin ortasında olduğu için bu durum Average Case kapsamına girer.
+
+4. Soru- [7,3,5,8,2,9,4,15,6] dizisinin Selection Sort'a göre ilk 4 adımını yazınız.
+[2,3,5,8,7,9,4,15,6]
+[2,3,5,8,7,9,4,15,6]
+[2,3,4,8,7,9,5,15,6]
+[2,3,4,5,7,9,8,15,6]
